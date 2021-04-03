@@ -1,0 +1,258 @@
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container"><a class="navbar-brand" href="#">Tinder</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Back to home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white masthead">
+        <div class="masthead-content"></div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <main class="page projects-page">
+        <section class="portfolio-block projects-cards">
+            <div class="container">
+                <div class="heading">
+                    <h2></h2>
+                </div>
+                <header class="container-fluid login-clean">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col align-self-start">
+                                <form class="d-flex">
+                                    <input id="inputSearch" class="form-control me-2" type="search" placeholder="Họ tên"
+                                        aria-label="Search">
+                                    <button id="btnSearch" class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                            <div class="col ">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class='row'><p style="color:red" class="col">Danh sách tìm kiếm</p></div>
+                    <div class="row rowSearch" style='display: none;'>
+                        <div class="col">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Họ tên</th>
+                                        <th scope="col">Ngày Sinh</th>
+                                        <th scope="col">SDT(email)</th>
+                                        <th scope="col">Giới tính</th>
+                                        <th scope="col">Sở thích</th>
+                                        <th scope="col">Giới thiệu ngắn</th>
+                                        <th scope="col" class="col-md-6 col-lg-4">Avatar</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="userSearch">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            
+                    <div class='row'><p style="color:red" class="col">Danh sách User</p></div>
+                    <div class="row">
+                        <div class="col">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Họ tên</th>
+                                        <th scope="col">Ngày Sinh</th>
+                                        <th scope="col">SDT(email)</th>
+                                        <th scope="col">Giới tính</th>
+                                        <th scope="col">Sở thích</th>
+                                        <th scope="col">Giới thiệu ngắn</th>
+                                        <th scope="col" class="col-md-6 col-lg-4">Avatar</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="listUser">
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </header>
+               
+            </div>
+        </section>
+    </main>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© Tinder 2021</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+
+        let images ='data:image/jpeg;base64,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';
+
+
+        var listUser = $('.listUser');
+        var userSearch = $('.userSearch');
+        var inputSearch = $('#inputSearch');
+        var buttonSearch = $('#btnSearch');
+        // tìm  kiếm
+        buttonSearch.click(function (ev) {
+            ev.preventDefault();
+            var users = arr.filter(user => user.name === inputSearch.val().trim());
+            if (users.length !== 0) {
+                var p = '';
+                $('.rowSearch').css({ 'display': 'block' })
+                users.forEach((element, index) => {
+                    p += `<tr>
+                    <td>${index + 1}</td>
+                            <td scope="row">${element.name}</td>
+                            <td>${element.ngaySinh}</td>
+                            <td >${element.email}</td>
+                            <td >${element.gioiTinh}</td>
+                            <td >${element.soThich}</td>
+                            <td >${element.gioiThieu}</td>
+                            <td><img class="img-avatar" src="${element.images}" /></td>
+                        </tr> `
+                })
+                userSearch.html(p)
+            } else {
+                $('.rowSearch').css({ 'display': 'none' })
+                alert('Không tìm thấy họ tên')
+            }
+        })
+
+
+        var object = {
+            name: 'Nguyễn văn a',
+            ngaySinh: '1/2/2001',
+            email: 'vana@fpt.edu.vn',
+            gioiTinh: 'nam',
+            soThich: 'abc',
+            gioiThieu: 'không có',
+            images
+        }
+        var object1 = {
+            name: 'Nguyễn văn b',
+            ngaySinh: '1/9/2001',
+            email: 'vanb999@gmail.com',
+            gioiTinh: 'nam',
+            soThich: 'abc',
+            gioiThieu: 'không có',
+            images
+        }
+        var object2 = {
+            name: 'nguyễn văn s',
+            ngaySinh: '1/10/2001',
+            email: 'vans1234@gmail.com',
+            gioiTinh: 'nam',
+            soThich: 'abc',
+            gioiThieu: 'không có',
+            images
+        }
+
+        var arr = [object, object1, object2, object];
+
+        const updateArr = function(){
+            arr.forEach(function (element, index) {
+                listUser.append(`<tr class="tr">
+                            <th  scope="row">${index}</th>
+                            <td ><input class="input" name="name" type="text" value="${element.name}" disabled></td>
+                            <td ><input class="input" name="ngaySinh" type="text" value="${element.ngaySinh}" disabled></td>
+                            <td ><input class="input" name="email" type="text" value="${element.email}" disabled></td>
+                            <td  ><input class="input" name="gioitinh" type="text" value="${element.gioiTinh}" disabled></td>
+                            <td  ><input class="input" name="sothich" type="text" value="${element.soThich}" disabled></td>
+                            <td  ><input class="input" name="gioithieu" type="text" value="${element.gioiThieu}" disabled></td>
+                            <td  ><img class="img-avatar" src="${element.images}" /></td>
+                            <td  ><button class="btn-remove">Delete</button><button class="btn-edit">Edit</button></td>
+                        </tr> `)
+            })
+        }
+        // danh sách
+        $(document).ready(function () {
+           updateArr()
+            // xóa 
+            const btnXoa = document.querySelectorAll('.btn-remove')
+            const btnSua = document.querySelectorAll('.btn-edit')
+            const tr = document.querySelectorAll('.tr');
+            btnXoa.forEach((element, key) => {
+                element.addEventListener('click', function (ev) {
+                    tr[key].style.display = "none";
+                    arr.splice(key, 1);
+                    console.log(arr)
+                })
+            });
+
+            btnSua.forEach((element,index)=>{
+                element.addEventListener("click",function(){
+                    $('input[name="name"]')[index].disabled = false;
+                    $('input[name="email"]')[index].disabled = false;
+                    $('input[name="gioitinh"]')[index].disabled = false;
+                    $('input[name="sothich"]')[index].disabled = false;
+                    $('input[name="gioithieu"]')[index].disabled = false;
+                    console.log('sửa'+index)
+                })
+                
+            })
+            
+            for (let index = 0; index < btnSua.length; index++) {
+                btnSua[index].addEventListener("click",function(){
+                    if(btnSua[index].innerHTML === 'Edit'){
+                        btnSua[index].innerHTML = "Save"
+                     $('input[name="name"]')[index].disabled = false;
+                     $('input[name="ngaySinh"]')[index].disabled = false;
+                    $('input[name="email"]')[index].disabled = false;
+                    $('input[name="gioitinh"]')[index].disabled = false;
+                    $('input[name="sothich"]')[index].disabled = false;
+                    $('input[name="gioithieu"]')[index].disabled = false;
+                    } else{
+                    btnSua[index].innerHTML = 'Edit'
+                    $('input[name="name"]')[index].disabled = true;
+                    $('input[name="ngaySinh"]')[index].disabled = true;
+                    $('input[name="email"]')[index].disabled = true;
+                    $('input[name="gioitinh"]')[index].disabled = true;
+                    $('input[name="sothich"]')[index].disabled = true;
+                    $('input[name="gioithieu"]')[index].disabled = true;
+                    }
+                })
+                
+            }
+
+        })
+    
+        // khi nhấn vào thêm
+        const buttonThem = $('#add-user');
+        buttonThem.click(function (ev) {
+            ev.preventDefault();
+            const name = $('#ipName').val();
+            const ngaySinh = $('#ipNgaySinh').val();
+            const email = $('#ipEmail').val();
+            const soThich = $('#textareaSoThich').val();  
+            const gioiThieu = $('#textareaGioiThieu').val();  
+            var a = document.getElementsByName('flexRadioDefault');
+            let gioiTinh = '';
+            if(a[0].checked){
+                gioiTinh = 'nam';
+            }else if(a[1].checked){
+                gioiTinh = 'nữ';
+            }
+            var object = {name,ngaySinh,email,gioiTinh,soThich,gioiThieu,images};
+            arr.push(object);
+            listUser.append(`<tr>
+                            <th scope="row">4</th>
+                            <td ><input class="input" name="name" type="text" value="${object.name}" disabled></td>
+                            <td ><input class="input" name="ngaySinh" type="text" value="${object.ngaySinh}" disabled></td>
+                            <td ><input class="input" name="email" type="text" value="${object.email}" disabled></td>
+                            <td  ><input class="input" name="gioitinh" type="text" value="${object.gioiTinh}" disabled></td>
+                            <td  ><input class="input" name="sothich" type="text" value="${object.soThich}" disabled></td>
+                            <td  ><input class="input" name="gioithieu" type="text" value="${object.gioiThieu}" disabled></td>
+                            <td  ><img class="img-avatar" src="${object.images}" /></td>
+                            <td  ><button class="btn-remove">Delete</button><button class="btn-edit">Edit</button></td>
+                       </tr> `)
+                       alert('Thêm thành công')
+        })
+    </script>
